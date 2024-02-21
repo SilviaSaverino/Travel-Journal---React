@@ -103,6 +103,7 @@ nav {
   margin: auto 0;
 }
 
+
 .card-icon {
   object-fit: contain;
   margin-right: 0.5em;
@@ -114,8 +115,20 @@ nav {
   width: 100%;
   padding: 1em;
   margin: 0 auto;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
 
 .card-location-name {
   margin: 0;
@@ -184,6 +197,11 @@ span {
   .card {
     max-height: 30vh;
     padding: 1.5em;
+  }
+
+  .card-badge {
+    top: 30px;
+    left:30px;
   }
 
   .card-img {
