@@ -67,11 +67,23 @@ button:focus-visible {
   }
 } */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 body {
   margin: 0; 
+  padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
+}
+
+#root {
+  padding: 1em;
 }
 
 nav {
@@ -80,6 +92,7 @@ nav {
   display: flex;
   justify-content: center;
   align-content: baseline;
+  width: 100%;
 }
 
 .logo {
@@ -88,4 +101,105 @@ nav {
   height: 40px;
   padding: 0; 
   margin: auto 0;
+}
+
+.card-icon {
+  object-fit: contain;
+  margin-right: 0.5em;
+}
+
+.card {
+  display: flex;
+  min-height: 200px;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+.card-location-name {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 1em; 
+}
+
+.card-img {
+  width: 40%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-location-info {
+  display: flex;
+  align-items: center;
+  font: 0.2rem;
+  text-align: left;
+  padding-top: 1em;
+}
+
+.google-location {
+  color: grey;
+  font-size: 0.6rem;
+  margin-left: 0.8em;
+}
+
+.card-info {
+  display: block;
+  text-align: left;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+p {
+  letter-spacing: 1.5px;
+}
+
+span {
+  margin-bottom: 2em;
+  font-size: 0.8em;
+}
+
+@media (min-width: 850px) {
+
+  #root {
+    padding: 0 5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    max-height: 30vh;
+    padding: 1.5em;
+  }
+
+  .card-img {
+    max-width:30%;
+  }
+
+  .card-content {
+    justify-content: center;
+  }
+  
+  .google-location{
+    font-size: 1em;
+  }
+  
+  .card-icon {
+    height: 16px;
+  }
+ 
 }
